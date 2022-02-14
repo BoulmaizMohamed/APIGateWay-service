@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: User
+          uri: lb://User
+          predicates:
+            - /user/**
+        - id: Passager
+            uri: lb://Passager
+            predicates:
+              - /Passager/**
+        - id: RFID
+            uri: lb://RFID
+            predicates:
+              - /RFID/**
